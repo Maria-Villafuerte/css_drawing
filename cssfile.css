@@ -1,0 +1,162 @@
+
+:root {
+  --background: #0F2F3C;
+  --skin: #8EC83E;
+  --black: #10122B;
+  --white: #fff;
+  --kirby: #f8c9e3;
+  --fondo: #2573a3;
+  --slime: #DAE21C;
+  --blush: #e791bf;
+  --patital: #fd558d;
+}
+
+fondo {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  grid-template-rows: repeat(11, 40px);
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  width: 280px; 
+  height: 440px; 
+  background-color: var(--fondo);
+  border: #000;
+}
+
+fresa {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  background-color: #ff3333; /* Color de la fresa */
+  border-radius: 50% 50% 0 0; /* Borde redondeado para la parte superior */
+}
+
+hojas {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid #00cc00; /* Color de las hojas (verde) */
+  transform: translateX(-50%);
+}
+
+
+
+
+
+circle {
+  width: 100px;
+  height: 100px;
+  background-color: #337633; /* Color de fondo del círculo */
+  border: 2px solid #000; /* Borde negro de 2 píxeles */
+  border-radius: 50%; /* Hace que los bordes sean redondeados, creando un círculo */
+}
+
+
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Elementos */
+
+kirby{
+  display: grid;
+  grid-template-columns: repeat(100, 1px);
+  grid-template-rows: repeat(100, 1px);
+  width: 100px;
+  height: 100px;
+  background-color: var(--kirby); 
+  border: 2px solid #000; 
+  border-radius: 50%; 
+}
+
+kirby_1{
+  display: grid;
+  grid-template-columns: repeat(100, 1px);
+  grid-template-rows: repeat(100, 1px);
+  width: 100px;
+  height: 100px;
+  background-color: var(--kirby); 
+  border: 2px ;
+  border-radius: 50%; 
+
+}
+
+manitas{
+  width: 47px;
+  height: 42px;
+  background-color: var(--kirby); /* Color de fondo del círculo */
+  border: 2px solid #000; /* Borde negro de 2 píxeles */
+  border-radius: 50%; 
+
+}
+
+
+Patitas{
+  width: 40px;
+  height: 50px;
+  background-color: var(--patital); /* Color de fondo del círculo */
+  border: 2px solid #000; /* Borde negro de 2 píxeles */
+  border-radius: 60% 60% 80% 80% / 60% 60% 80% 80%;
+  align-self: ce;
+  
+}
+
+ojo {
+  width: 20px;
+  height: 30px;
+  background-color: var(--black);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+pupila {
+  width: 12px;
+  height: 17px;
+  background-color: var(--white);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  border-radius: 80% 80% 60% 60% / 60% 60% 80% 80%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+pupila_2 {
+  width: 11px;
+  height: 7px;
+  background-color: var(--fondo);
+  border-radius: 50%;
+  z-index:5;
+}
+
+
+blush {
+  width: 20px;
+  height: 10px;
+  background-color: var(--blush);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+boca {
+  width: 10px;
+  height: 4px; /* as the half of the width */
+  border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+  border-top-right-radius: 110px; /* 100px of height + 10px of border */
+  border: 1px solid var(--black);
+  border-bottom: 0;
+  transform: rotate(180deg)
+}
+
