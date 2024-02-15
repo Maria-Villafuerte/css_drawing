@@ -24,38 +24,17 @@ fondo {
   border: #000;
 }
 
-fresa {
-  position: relative;
-  width: 100px;
-  height: 150px;
-  background-color: #ff3333; /* Color de la fresa */
-  border-radius: 50% 50% 0 0; /* Borde redondeado para la parte superior */
+fondo::after {
+  content: 'Kirby';
+  display: flex; /* Utiliza flexbox en lugar de grid */
+  align-items: center; /* Alinea en el centro verticalmente */
+  justify-content: center; 
+  width: 45px;
+  height: 20px;
+  border-radius: 50%; 
+  text-align: center;
+  background-color: #ffffff;
 }
-
-hojas {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 30px solid #00cc00; /* Color de las hojas (verde) */
-  transform: translateX(-50%);
-}
-
-
-
-
-
-circle {
-  width: 100px;
-  height: 100px;
-  background-color: #337633; /* Color de fondo del círculo */
-  border: 2px solid #000; /* Borde negro de 2 píxeles */
-  border-radius: 50%; /* Hace que los bordes sean redondeados, creando un círculo */
-}
-
 
 
 body {
@@ -87,8 +66,10 @@ kirby_1{
   background-color: var(--kirby); 
   border: 2px ;
   border-radius: 50%; 
-
 }
+
+
+
 
 manitas{
   width: 47px;
@@ -96,9 +77,12 @@ manitas{
   background-color: var(--kirby); /* Color de fondo del círculo */
   border: 2px solid #000; /* Borde negro de 2 píxeles */
   border-radius: 50%; 
-
+  transition: margin-top 3s;
 }
 
+manitas:hover {
+  margin-top: 20px;  /* Cambia el margen derecho al pasar el cursor sobre el elemento */
+}
 
 Patitas{
   width: 40px;
@@ -160,3 +144,38 @@ boca {
   transform: rotate(180deg)
 }
 
+
+@keyframes slidein {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+cloud {
+  width: 50px; height: 20px;
+  background: #BFF;
+  background: linear-gradient(top, #BFF 5%, #DFF 100%);
+  background: -webkit-linear-gradient(top, #FFF 1%, #BFF 100%);
+  background: -moz-linear-gradient(top, #BFF 5%, #DFF 100%);
+  background: -ms-linear-gradient(top, #BFF 5%, #DFF 100%);
+  top: 50px; left: 50px;
+  border-radius: 100px;
+  margin: 120px auto 20px;
+  left:200px;
+  animation: slidein 4s ease-in 2s infinite reverse both running;
+
+}
+cloud:first-child {
+  /* Estilos específicos para el primer hijo */
+  width: 40px;
+}
+cloud :last-child {
+  /* Estilos específicos para el último hijo */
+  width: 80px;
+}
